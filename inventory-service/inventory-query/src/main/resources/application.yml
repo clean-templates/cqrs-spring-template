@@ -13,5 +13,15 @@ spring:
       ddl-auto: create
   application:
     name: inventory-query-service
+  kafka:
+    bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+    consumer:
+      group-id: products-group
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 server:
-  port: 8081
+  port: 8082
+
+
+

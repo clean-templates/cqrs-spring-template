@@ -16,7 +16,7 @@ spring:
 
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
     consumer:
       group-id: products-group
     producer:
