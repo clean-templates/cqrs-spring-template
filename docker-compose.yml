@@ -1,0 +1,39 @@
+version: '3.7'
+services:
+
+  postgresqldb-query:
+    image: postgres
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      POSTGRES_DB: inventory-query
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - command-db-data:/var/lib/postgresql/data
+
+
+  postgresqldb-command:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: inventory-command
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - query-db-data:/var/lib/postgresql/data
+
+
+
+
+volumes:
+  command-db-data:
+  query-db-data:
+
+networks:
+  cqrs-application:
+    driver: bridge
