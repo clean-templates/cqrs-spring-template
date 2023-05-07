@@ -1,7 +1,7 @@
 package com.rolandsall.inventory.command.infra.product.persistence;
 
 import com.rolandsall.inventory.command.core.application.product.IProductWriteManager;
-import com.rolandsall.inventory.command.core.domain.Product;
+import com.rolandsall.inventory.command.core.domain.entities.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

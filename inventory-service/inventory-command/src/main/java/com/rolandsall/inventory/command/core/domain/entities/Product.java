@@ -1,4 +1,4 @@
-package com.rolandsall.inventory.command.core.domain;
+package com.rolandsall.inventory.command.core.domain.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
